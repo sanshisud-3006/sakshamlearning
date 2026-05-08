@@ -1,34 +1,16 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* App-level utilities & animations */
+.fade-up { animation: fadeUp 0.7s ease-out both; }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.gold-line {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #BA7517, transparent);
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
+.shadow-warm { box-shadow: 0 24px 50px -22px rgba(27, 58, 107, 0.18); }
 
-.App-link {
-    color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
+/* Star rating */
+.stars { color: #BA7517; letter-spacing: 2px; }
