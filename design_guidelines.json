@@ -1,0 +1,166 @@
+{
+  "theme": {
+    "archetype": "Organic & Earthy + Heritage Premium (Archetype 1 + 5 blend)",
+    "mode": "light",
+    "tone": "Warm, Encouraging, Trustworthy, Academically rigorous",
+    "backgrounds": {
+      "default": "#FDFBF7",
+      "card": "#FFFFFF",
+      "muted": "#F3F0E9",
+      "dark_section": "#1B3A6B",
+      "gold_section": "#BA7517"
+    }
+  },
+  "colors": {
+    "brand": {
+      "primary_navy": "#1B3A6B",
+      "primary_gold": "#BA7517",
+      "ivory": "#FDFBF7"
+    },
+    "subjects": {
+      "english": "#4472C4",
+      "maths": "#70AD47",
+      "science": "#ED7D31",
+      "sst": "#534AB7"
+    },
+    "difficulty_badges": {
+      "easy": "#E2EFDA",
+      "moderate": "#FFF2CC",
+      "difficult": "#FCE4D6"
+    },
+    "text": {
+      "primary": "#1A202C",
+      "secondary": "#4A5568",
+      "on_navy": "#FDFBF7",
+      "on_gold": "#FFFFFF"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "heading": "'Fraunces', serif",
+      "body": "'Manrope', sans-serif"
+    },
+    "scale": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-tight font-heading font-semibold text-[#1B3A6B]",
+      "h2": "text-3xl sm:text-4xl tracking-tight font-heading font-medium text-[#1B3A6B]",
+      "h3": "text-2xl font-heading font-medium text-[#1B3A6B]",
+      "h4": "text-xl font-heading font-medium",
+      "body": "text-base text-gray-700 font-body leading-relaxed",
+      "label": "text-sm font-bold tracking-[0.1em] uppercase text-[#1B3A6B]/70"
+    }
+  },
+  "ui_components": {
+    "buttons": {
+      "primary_gold": "bg-[#BA7517] text-white hover:bg-[#965E12] px-8 py-4 rounded-md font-medium transition-all shadow-md hover:shadow-lg focus:ring-2 focus:ring-[#BA7517] focus:ring-offset-2 focus:ring-offset-[#FDFBF7]",
+      "primary_navy": "bg-[#1B3A6B] text-[#FDFBF7] hover:bg-[#112648] px-8 py-4 rounded-md font-medium transition-all shadow-md hover:shadow-lg focus:ring-2 focus:ring-[#1B3A6B] focus:ring-offset-2",
+      "outline": "border-2 border-[#1B3A6B] text-[#1B3A6B] hover:bg-[#1B3A6B] hover:text-[#FDFBF7] px-8 py-4 rounded-md transition-all font-medium focus:ring-2 focus:ring-[#1B3A6B]"
+    },
+    "cards": {
+      "product": "bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100 flex flex-col h-full",
+      "testimonial": "bg-[#F3F0E9] rounded-xl p-8 relative border-t-4 border-[#BA7517]",
+      "subject": "rounded-2xl p-6 text-white overflow-hidden relative group transition-transform hover:-translate-y-1"
+    },
+    "badges": {
+      "easy": "bg-[#E2EFDA] text-green-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider",
+      "moderate": "bg-[#FFF2CC] text-yellow-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider",
+      "difficult": "bg-[#FCE4D6] text-orange-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider",
+      "level_stars_easy": "flex gap-1 text-green-700 text-sm",
+      "level_stars_moderate": "flex gap-1 text-yellow-600 text-sm",
+      "level_stars_difficult": "flex gap-1 text-orange-600 text-sm"
+    },
+    "inputs": "bg-white border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#1B3A6B] focus:border-transparent font-body"
+  },
+  "spacing_and_layout": {
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "section_padding": "py-20 lg:py-32",
+    "grid_bento": "grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8",
+    "grid_products": "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+  },
+  "micro_interactions": {
+    "hover_card": "Subtle upward translation (-translate-y-1) for product cards with shadow-lg expansion.",
+    "active_button": "Slight scale down (scale-[0.98]) on active press for tactile feel.",
+    "links": "Underline expansion from left to right on hover for footer and text links."
+  },
+  "page_blueprints": {
+    "home": {
+      "hero": "Asymmetric layout. Left side: Tagline ('Every child is capable...') in large Fraunces h1, secondary gold CTA button. Right side: Generated flatlay image of desk/worksheets overlapping a navy background block. Background should be warm ivory (#FDFBF7).",
+      "how_it_works": "3-column grid explaining Easy, Moderate, Difficult levels. Use the specific badge colors as subtle background highlights for each column.",
+      "subjects_grid": "Bento box grid featuring the 4 subjects (Maths, English, Science, SST). Cards must use the exact assigned hex codes as solid background colors, with white text.",
+      "testimonials": "Carousel of parent reviews on ivory/cream cards. Warm, trustworthy vibe.",
+      "newsletter_cta": "Deep navy background section (#1B3A6B) with gold accents. Large serif heading for trust, clean input field for email."
+    },
+    "ecommerce": {
+      "catalog": "Sidebar layout. Left sidebar: Collapsible filters for Grade (KG-IX), Subject, and Level (Easy/Moderate/Difficult). Right side: Grid of product cards.",
+      "product_card": "Image thumbnail on top (worksheet preview). Below: Title in Fraunces, Subject tag, Difficulty badge, Price, and 'Add to Cart' button.",
+      "product_detail": "Split view. Left: Large image gallery with worksheet preview. Right: Product details, grade/level badges, detailed description, 'Add to cart' and 'Buy Now' buttons.",
+      "cart_checkout": "Clean, distraction-free flow using Shadcn forms, integrating Razorpay."
+    },
+    "dashboard_admin": {
+      "layout": "Sidebar navigation. White background with sharp grey borders (Archetype 4). Dense data tables for orders and worksheets.",
+      "forms": "Detailed forms to upload PDFs, set Grade/Subject/Level, specify price, upload sample preview."
+    }
+  },
+  "media_assets": {
+    "logo": {
+      "url": "https://customer-assets.emergentagent.com/job_e476bd10-21d2-43ca-bb93-03f5d4e8cf3f/artifacts/027nb2aa_saksham_logo.png",
+      "alt": "Saksham Learning Logo"
+    },
+    "images": [
+      {
+        "category": "hero_background",
+        "url": "https://static.prod-images.emergentagent.com/jobs/e476bd10-21d2-43ca-bb93-03f5d4e8cf3f/images/ac2e6fbecd8ba14b83091f15c56aa5cf71f6757156ddc0e324fc161b7f653d8d.png",
+        "description": "Warm flat lay of educational worksheets, navy notebook, gold pencil on a desk. Perfect for hero or background."
+      },
+      {
+        "category": "feature_writing_detail",
+        "url": "https://static.prod-images.emergentagent.com/jobs/e476bd10-21d2-43ca-bb93-03f5d4e8cf3f/images/d60cd7a029cc573c716cb1679b76e7f846a040d8783c6babd863d9a63327be61.png",
+        "description": "Close up of child's hand filling worksheet with a gold pencil on navy desk mat."
+      },
+      {
+        "category": "lifestyle_child_studying",
+        "url": "https://images.unsplash.com/photo-1755534316951-8a2c8ad3b56f",
+        "description": "Young boy interacting with a book, showing a playful learning moment."
+      },
+      {
+        "category": "lifestyle_parent",
+        "url": "https://images.unsplash.com/photo-1620673612034-a3e99dce80af",
+        "description": "Woman sitting on the floor, can represent a mother involved in home-learning."
+      },
+      {
+        "category": "product_worksheet_pile",
+        "url": "https://images.unsplash.com/photo-1708793715672-1464958800c3",
+        "description": "Table topped with papers, representing printed worksheets."
+      },
+      {
+        "category": "lifestyle_writing",
+        "url": "https://images.unsplash.com/photo-1707246719682-6841358980c0",
+        "description": "Close up of person writing in a notebook."
+      },
+      {
+        "category": "lifestyle_desk_focus",
+        "url": "https://images.pexels.com/photos/5303510/pexels-photo-5303510.jpeg",
+        "description": "Close-up of child writing homework using a pencil."
+      },
+      {
+        "category": "lifestyle_glasses_learning",
+        "url": "https://images.pexels.com/photos/13779221/pexels-photo-13779221.jpeg",
+        "description": "Child with glasses writing in notebook."
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Load Google Fonts: 'Fraunces' (weights 400,500,600) for all headings, and 'Manrope' (weights 400,500,600) for body text.",
+    "Stick STRICTLY to the brand colors provided: Primary Navy #1B3A6B, Primary Gold #BA7517.",
+    "Map subjects EXACTLY to these colors: English #4472C4, Maths #70AD47, Science #ED7D31, SST #534AB7. Use these as background colors for subject cards or pill badges.",
+    "Map difficulty levels EXACTLY to: Easy #E2EFDA, Moderate #FFF2CC, Difficult #FCE4D6.",
+    "Do NOT use pure white backgrounds for main layout areas; lean into warm ivory #FDFBF7 for the main page backgrounds to feel premium, soft, and educator-crafted.",
+    "Every interactive element MUST include a data-testid attribute in kebab-case (e.g., data-testid='hero-cta-button', data-testid='add-to-cart-btn').",
+    "Use Shadcn UI for standard components like forms, tabs, and admin elements. However, use raw HTML/Tailwind for marketing sections (Hero, Features) to ensure a bespoke 'Heritage' feel without generic SaaS constraints.",
+    "Do NOT use Inter, Roboto, Poppins, Space Grotesk, or Montserrat anywhere. Ensure Tailwind config sets Fraunces as 'font-heading' and Manrope as 'font-body'.",
+    "Include a floating WhatsApp button fixed to the bottom right of the screen for customer support.",
+    "The hero section MUST prominently display the exact tagline: 'Every child is capable — of learning at their pace, in their place.'",
+    "Maintain high accessibility (contrast) - especially over colored subject blocks. Ensure text on #1B3A6B is white/ivory.",
+    "Ensure the Admin Panel is fully separate (e.g., under /admin) from the customer facing store.",
+    "For difficulty indicators, accompany the pill badges with visual stars (★, ★★, ★★★) where applicable to reinforce the level visually."
+  ]
+}
