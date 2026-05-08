@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api, { formatErr, formatINR } from "@/lib/api";
 import { useCart } from "@/lib/cart";
@@ -11,13 +11,15 @@ export default function Checkout() {
   const nav = useNavigate();
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState("");
+  const paid = useRef(false);
 
   useEffect(() => {
     if (!user) nav("/login?next=/checkout");
   }, [user, nav]);
 
   useEffect(() => {
-    if (items.length === 0) nav("/cart");
+    // Only redirect to /cart if the cart is empty AND the user hasn't just paid.
+    if (items.length === 0 && !paid.current) nav("/cart");
   }, [items, nav]);
 
   const placeOrder = async () => {
@@ -30,12 +32,11 @@ export default function Checkout() {
 
       if (data.is_mock) {
         // Simulate Razorpay flow (test mode placeholder)
-        const ok = await new Promise((res) => setTimeout(() => res(true), 1200));
-        if (ok) {
-          await api.post("/orders/verify", { order_id: orderId, mock: true });
-          clear();
-          nav(`/order-success?order_id=${orderId}`);
-        }
+        await new Promise((res) => setTimeout(res, 900));
+        await api.post("/orders/verify", { order_id: orderId, mock: true });
+        paid.current = true;
+        nav(`/order-success?order_id=${orderId}`, { replace: true });
+        setTimeout(() => clear(), 100);
       } else {
         // Real Razorpay flow
         await loadRazorpay();
@@ -54,8 +55,9 @@ export default function Checkout() {
                 razorpay_order_id: resp.razorpay_order_id,
                 razorpay_signature: resp.razorpay_signature,
               });
-              clear();
-              nav(`/order-success?order_id=${orderId}`);
+              paid.current = true;
+              nav(`/order-success?order_id=${orderId}`, { replace: true });
+              setTimeout(() => clear(), 100);
             } catch (e) { setErr(formatErr(e)); }
           },
           prefill: { name: user?.name, email: user?.email },
