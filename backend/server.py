@@ -55,6 +55,9 @@ db = mongo_client[DB_NAME]
 # ------------------ App ------------------
 app = FastAPI(title="Saksham Learning API")
 api = APIRouter(prefix="/api")
+@api.get("/health")
+def health():
+    return {"status": "ok"}
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 log = logging.getLogger("saksham")
